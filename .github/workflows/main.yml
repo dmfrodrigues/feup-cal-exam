@@ -37,3 +37,8 @@ jobs:
       with:
         name: cal-consulta-proj.pdf
         path: cal-consulta-proj.pdf
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cal-consulta-tp.pdf
+        path: cal-consulta-tp.pdf
