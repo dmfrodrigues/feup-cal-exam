@@ -1,0 +1,6 @@
+[submodule "feup-cal-proj"]
+	path = feup-cal-proj
+	url = https://github.com/dmfrodrigues/feup-cal-proj.git
+[submodule "feup-cal-ex"]
+	path = feup-cal-ex
+	url = https://github.com/dmfrodrigues/feup-cal-ex.git
