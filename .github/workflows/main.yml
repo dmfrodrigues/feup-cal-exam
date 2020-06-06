@@ -1,0 +1,38 @@
+name: Compile docs
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install pandoc
+      run: |
+        cd ~
+        wget https://github.com/jgm/pandoc/releases/download/2.9.2.1/pandoc-2.9.2.1-1-amd64.deb
+        sudo apt install -y ./pandoc-2.9.2.1-1-amd64.deb
+
+    - name: Install other dependencies with apt
+      run: |
+        sudo apt install -y texlive-latex-extra
+
+    - name: Checkout submodules
+      shell: bash
+      run: |
+        # If your submodules are configured to use SSH instead of HTTPS please uncomment the following line
+        # git config --global url."https://github.com/".insteadOf "git@github.com:"
+        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+        git submodule sync --recursive
+        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
+    - name: Make docs
+      run: make
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: cal-consulta-proj.pdf
+        path: cal-consulta-proj.pdf
