@@ -21,12 +21,14 @@ jobs:
         sudo apt install -y texlive-latex-extra
 
     - name: Checkout submodules
+      shell: bash
       run: |
-        git config --file .gitmodules --get-regexp url | while read url; do
-          git config --file=.gitmodules $(echo "$url" | sed -E "s/git@github.com:|https:\/\/github.com\//https:\/\/${{ secrets.CI_PAT }}:${{ secrets.CI_PAT }}@github.com\//")
-        done
-        git submodule sync
-        git submodule update --init --recursive
+        # If your submodules are configured to use SSH instead of HTTPS please uncomment the following line
+        # git config --global url."https://github.com/".insteadOf "git@github.com:"
+        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+        git submodule sync --recursive
+        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+        
 
     - name: Make docs
       run: make
