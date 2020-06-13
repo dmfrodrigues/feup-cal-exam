@@ -28,17 +28,24 @@ jobs:
         auth_header="$(git config --local --get http.https://github.com/.extraheader)"
         git submodule sync --recursive
         git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
-        
 
     - name: Make docs
       run: make
 
-    - uses: actions/upload-artifact@v2
+    - name: Upload t
+      uses: actions/upload-artifact@v2
       with:
-        name: cal-consulta-proj.pdf
-        path: cal-consulta-proj.pdf
+        name: cal-consulta-t.pdf
+        path: cal-consulta-t.pdf
 
-    - uses: actions/upload-artifact@v2
+    - name: Upload tp
+      uses: actions/upload-artifact@v2
       with:
         name: cal-consulta-tp.pdf
         path: cal-consulta-tp.pdf
+
+    - name: Upload proj
+      uses: actions/upload-artifact@v2
+      with:
+        name: cal-consulta-proj.pdf
+        path: cal-consulta-proj.pdf
