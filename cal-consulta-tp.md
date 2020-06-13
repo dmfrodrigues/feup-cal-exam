@@ -11,15 +11,7 @@ author:
 date:
 - 1st of July, 2020
 
-documentclass: book
-
-papersize: a4
-
-geometry:
-- top=25mm
-- bottom=25mm
-- left=25mm
-- right=25mm
+documentclass: codeconsulting
 
 urlcolor: #0645AD
 
@@ -90,3 +82,9 @@ code:feup-cal-ex/tp07/cal_fp07_CLion/Tests/Graph.h
 code:feup-cal-ex/tp07/cal_fp07_CLion/Tests/MutablePriorityQueue.h
 
 code:feup-cal-ex/tp07/cal_fp07_CLion/Tests/tests.cpp
+
+# TP08
+
+code:feup-cal-ex/tp08/cal_fp08_CLion/Tests/Graph.h
+
+code:feup-cal-ex/tp08/cal_fp08_CLion/Tests/tests.cpp

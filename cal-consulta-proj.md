@@ -11,15 +11,7 @@ author:
 date:
 - 1st of July, 2020
 
-documentclass: book
-
-papersize: a4
-
-geometry:
-- top=25mm
-- bottom=25mm
-- left=25mm
-- right=25mm
+documentclass: codeconsulting
 
 urlcolor: #0645AD
 
