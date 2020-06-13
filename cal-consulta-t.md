@@ -13,20 +13,31 @@ date:
 
 documentclass: report
 
+classoption:
+- twocolumn
+
 papersize: a4
 
 geometry:
-- top=25mm
-- bottom=25mm
-- left=25mm
-- right=25mm
+- top=10mm
+- bottom=20mm
+- left=10mm
+- right=10mm
 
 urlcolor: #0645AD
+
+header-includes:
+- \usepackage{enumitem}
+- \setlist[itemize]{noitemsep, topsep=0pt}
+- \usepackage{titlesec}
+- \titlespacing{\section}{0pt}{15pt}{0pt}
+- \titlespacing{\subsection}{0pt}{0pt}{0pt}
+- \titlespacing{\subsubsection}{0pt}{0pt}{0pt}
 ...
 
-# Aulas teóricas
+# Theoretical classes
 
-* **Algorithm conception techniques (1st part)**
+* **Algorithm conception techniques**
     * **T01** | Dynamic Programming (DP)
     * **T02** | Greedy algorithms
     * **T03** | Backtracking algorithms
@@ -55,7 +66,7 @@ urlcolor: #0645AD
     * **T21** | Some NP-complete problems
 * **T23** | Solved exercises
 
-## **Algorithm conception techniques (1st part)**
+## **Algorithm conception techniques**
 ### **T01** | Dynamic Programming (DP)
 - Knapsack problem
 - Fibonacci numbers
@@ -183,3 +194,31 @@ urlcolor: #0645AD
 - Ride share problem
 
 ## **T23** | Solved exercises
+
+# Practical classes
+* **TP01** | Dynamic Programming
+    - Factorial
+    - Change-making
+    - Subsequence sum
+    - Partitioning
+* **TP02** | Greedy algorithms
+    - Labirinth
+    - Sudoku
+    - Activity selection
+* **TP03** | Divide and Conquer
+    - Closest pair of points
+* **TP04** | Graphs
+    - Representing graphs
+    - DFS and BFS
+    - Topological sort
+* **TP05** | Shortest path
+    - BFS
+    - Dijkstra
+    - Bellman-Ford
+    - Floyd-Warshall
+* **TP07** | GraphViewer framework
+* **TP07** | Minimum spanning tree
+    - Prim
+    - Kruskal
+* **TP08** | Maximum flow problem
+    - Ford-Fulkerson
