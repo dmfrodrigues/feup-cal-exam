@@ -3,7 +3,7 @@ title:
 - CAL - Documents for consulting during exam
 
 subtitle:
-- Theoretical classes
+- Theoretical and Practical classes
 
 author:
 - Diogo Miguel Ferreira Rodrigues (<dmfrodrigues2000@gmail.com>)
@@ -216,7 +216,7 @@ header-includes:
     - Dijkstra
     - Bellman-Ford
     - Floyd-Warshall
-* **TP07** | GraphViewer framework
+* **TP06** | GraphViewer framework
 * **TP07** | Minimum spanning tree
     - Prim
     - Kruskal
