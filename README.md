@@ -13,3 +13,5 @@
 © 2020 Diogo Rodrigues
 
 All files are licensed under [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Public License](LICENSE) by **© 2020 Diogo Rodrigues**.
+
+Note that submodules may have their own licenses.
